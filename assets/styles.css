@@ -23,3 +23,25 @@
  .lux-one{grid-column:1;grid-row:2}
  .lux-three{grid-column:2;grid-row:2}
 }
+
+/* Hero alignment: keep copy in the image's open right side in both languages. */
+html,body{max-width:100%;overflow-x:hidden}
+[dir=rtl] .hero-inner{direction:ltr}
+[dir=rtl] .hero-copy{margin-left:0;margin-right:0;text-align:right;direction:rtl}
+[dir=rtl] .hero-info{direction:rtl}
+[dir=rtl] .hero-actions{direction:rtl}
+@media(max-width:768px){[dir=rtl] .hero-copy{text-align:center}}
+
+
+/* Premium registration dialogs */
+.premium-modal .modal-content{border:1px solid #d4ad71;border-radius:20px;overflow:hidden;background:linear-gradient(145deg,#fffdf8,#fff5e8);box-shadow:0 24px 70px rgba(35,3,14,.35)}
+.premium-modal .modal-header{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;border:0;background:linear-gradient(135deg,#4b071d,#25040e);padding:25px 60px 18px;color:#f3d38b}
+.premium-modal .modal-header h2{color:#f3d38b;margin:8px 0 0;font-size:2rem}
+.premium-modal .modal-header .btn-close{position:absolute;top:16px;right:18px;filter:invert(1) sepia(1);opacity:.9}
+[dir=rtl] .premium-modal .modal-header .btn-close{right:auto;left:18px}
+.modal-emblem{width:54px;height:54px;border:1px solid #e4bd70;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;background:#ffffff0d}.modal-emblem.success{color:#f2d27e}
+.premium-modal .modal-body{padding:26px 30px}.modal-message{font-size:1rem;line-height:1.9;margin:0;color:#4b1525}
+.premium-modal .modal-footer{border:0;padding:0 30px 26px}.modal-close-btn{min-width:150px}.outline-gold{border:1px solid #b9853f;color:#5b162a;background:transparent}.outline-gold:hover{background:#f3e2c6;color:#35101d}
+.entry-warning{display:flex;align-items:center;gap:10px;padding:13px 15px;border:1px solid #d6a951;background:#fff2d6;color:#5a3210;border-radius:12px;margin-bottom:20px;font-weight:600;line-height:1.6}.entry-warning i{font-size:1.25rem;color:#b5761e}.ticket-label{text-align:center;margin:4px 0 6px;color:#6b3a47}.reg-id{border-radius:10px;background:#fff;text-transform:uppercase;letter-spacing:1px}.barcode-wrap{background:#fffaf3;border:1px solid #ead5b4;border-radius:12px;padding:8px;text-align:center;margin:0 auto 18px;max-width:430px;overflow:hidden}.barcode-wrap svg{max-width:100%;height:auto}.registration-summary{text-align:center;color:#5b3a44;line-height:1.8}.ticket-actions{display:flex;justify-content:center;gap:10px}.ticket-actions .btn{min-width:145px}
+@media(max-width:576px){.premium-modal .modal-header{padding:22px 45px 16px}.premium-modal .modal-header h2{font-size:1.45rem}.premium-modal .modal-body{padding:20px 16px}.ticket-actions{flex-direction:column}.ticket-actions .btn{width:100%}.reg-id{font-size:2rem}}
+@media print{body.printing-ticket>*{display:none!important}body.printing-ticket #successModal{display:block!important;position:static!important;opacity:1!important;background:#fff!important}body.printing-ticket #successModal .modal-dialog{max-width:760px;margin:0 auto}body.printing-ticket #successModal .modal-content{box-shadow:none!important;border:1px solid #c8a468!important}body.printing-ticket #successModal .btn-close,body.printing-ticket #successModal .ticket-actions{display:none!important}body.printing-ticket #successModal .modal-header{-webkit-print-color-adjust:exact;print-color-adjust:exact}body.printing-ticket .entry-warning{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
